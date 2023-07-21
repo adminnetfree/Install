@@ -13,7 +13,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 clear
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Bankzza555666/izinvps/ipuk/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/adminnetfree/izinvps/ipuk/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -31,7 +31,7 @@ BURIQ () {
 }
 # https://raw.githubusercontent.com/apih46/access/main/ip 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Bankzza555666/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/adminnetfree/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -48,7 +48,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Bankzza555666/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/adminnetfree/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -211,16 +211,16 @@ echo -e "$green      FRANATA STORE               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/Bankzza555666/src/ipuk/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/adminnetfree/src/ipuk/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-#wget -q "https://raw.githubusercontent.com/Bankzza555666/src/ipuk/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
+#wget -q "https://raw.githubusercontent.com/adminnetfree/src/ipuk/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
 read -rp "You Name : " OWNER
 read -rp "Input domain : " -e pp
-read -rp "Input Id (-1001656668307) : " ID 
+read -rp "Input Id (-1001818371525) : " ID 
     if [ -z $pp ]; then
         echo -e "
         Nothing input for domain!
@@ -240,16 +240,16 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bankzza555666/src/ipuk/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/adminnetfree/src/ipuk/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bankzza555666/src/ipuk/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-#wget https://raw.githubusercontent.com/Bankzza555666/src/ipuk/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-wget https://raw.githubusercontent.com/Bankzza555666/src/ipuk/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/adminnetfree/src/ipuk/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+#wget https://raw.githubusercontent.com/adminnetfree/src/ipuk/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/adminnetfree/src/ipuk/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          FRANATA STORE              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -282,7 +282,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Bankzza555666/src/ipuk/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/adminnetfree/src/ipuk/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
